@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="produkte.css">
+    <script src="https://kit.fontawesome.com/960295115a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=DM+Sans&family=Inter:wght@300&family=Josefin+Sans&family=Libre+Baskerville&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <title>MietEinBauschild | Startseite</title>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <img class="top-header-content-logo" src="../assets/preview/logo.png">
+        </div>
+        <nav class="nav-bar">
+            <a class="nav-bar-selection" href="../index.html">Startseite</a>
+            <a class="nav-bar-selection" href="../Produkte/index.html">Produkte</a>
+            <a class="nav-bar-selection" href="../QR/index.html">QR-Code</a>
+            <a class="nav-bar-selection button" href="../Kontakt/index.html">Kontakt</a>
+        </nav>
+        <nav class="nav-bar-icon">
+            <button class="nav-bar-icon-btn button" onclick="openIconNavbar()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div class="nav-bar-icon-menu" id="nav-bar-icon-menu">
+        <a class="nav-bar-icon-selector" href="../index.html">Startseite</a>
+        <a class="nav-bar-icon-selector" href="../Produkte/index.html">Produkte</a>
+        <a class="nav-bar-icon-selector" href="../QR/index.html">QR-Code</a>
+        <a class="nav-bar-icon-selector" href="../Kontakt/index.html">Kontakt</a>
+        <button class="nav-bar-icon-close button" onclick="closeIconNavbar()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <section class="angebote-wrapper">
+        <h2 class="angebote-wrapper-title">Dies sind unsere Produkte</h2>
+
+        <div class="angebote-wrapper-list">
+            <div class="angebote-wrapper-item">
+                <img src="../assets/preview/preview1.png">
+
+                <h3>Bauschild / Bautafel</h3>
+                <p>Dieses Angebot ist komplett konfigurierbar und wird selber gebaut wie auch bei Anfrage demontiert.</p>
+                <p id="lieferung">Lieferung nach Vereinbarung</p>
+                <a class="angebot-item-btn button" href="../Kontakt/index.html">Anfrage stellen</a>
+            </div>
+            <div class="angebote-wrapper-item">
+                <img src="../assets/preview/containerwerbung.png">
+
+                <h3 class="angebote-wrapper-item-title">Containerwerbung</h3>
+                <p>Dieses Angebot ist komplett konfigurierbar und wird selber gebaut wie auch bei Anfrage demontiert.</p>
+                <p id="lieferung">Lieferung nach Vereinbarung</p>
+                <a class="angebot-item-btn button" href="../Kontakt/index.html">Anfrage stellen</a>
+            </div>
+            <div class="angebote-wrapper-item">
+                <img src="../assets/preview/bauzaun.png">
+                
+                <h3 class="angebote-wrapper-item-title">Bauzaunwerbung</h3>
+                <p>Dieses Angebot ist komplett konfigurierbar und wird selber gebaut wie auch bei Anfrage demontiert.</p>
+                <p id="lieferung">Lieferung nach Vereinbarung</p>
+                <a class="angebot-item-btn button" href="../Kontakt/index.html">Anfrage stellen</a>
+            </div>
+            <div class="angebote-wrapper-item">
+                <img src="../assets/preview/preview8.png">
+
+                <h3 class="angebote-wrapper-item-title">Baugerüstbanner und Ausleger</h3>
+                <p>Dieses Angebot ist komplett konfigurierbar und wird selber gebaut wie auch bei Anfrage demontiert.</p>
+                <p id="lieferung">Lieferung nach Vereinbarung</p>
+                <a class="angebot-item-btn button" href="../Kontakt/index.html">Anfrage stellen</a>
+            </div>
+            <div class="angebote-wrapper-item">
+                <img src="../assets/preview/preview9.png">
+
+                <h3 class="angebote-wrapper-item-title">Beschriftungen</h3>
+                <p>Dieses Angebot findet auf Baukränen, Bagger und allen anderen Fahrzeugen statt.</p>
+                <p id="lieferung">Lieferung nach Vereinbarung</p>
+                <a class="angebot-item-btn button" href="../Kontakt/index.html">Anfrage stellen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bottom-footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3 class="footer-item-title">MietEinBauschild</h3>
+                <p class="footer-item-title-desc">Medardusring 328<br>Mutterstadt</p>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Aktionen</h3>
+                <a class="footer-selector" href="../index.html">Startseite</a>
+                <a class="footer-selector" href="../Produkte/index.html">Produkte</a>
+                <a class="footer-selector" href="../QR/index.html">QR-Code</a>
+                <a class="footer-selector" href="../Kontakt/index.html">Kontakt</a>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Rechtliches</h3>
+                <a class="footer-selector" href="#">Impressum</a>
+                <a class="footer-selector" href="#">Datenschutz</a>
+                <a class="footer-selector" href="#">AGBs</a>
+            </div>
+            <div class="footer-item">
+                <a class="footer-selector" id="footer-icon" href="https://wa.me/4917671705022"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="../script.js"></script>
+    <script src="../config.js"></script>
+</body>
+</html>

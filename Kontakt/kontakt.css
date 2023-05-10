@@ -1,0 +1,190 @@
+.kontakt-box {
+    padding: 20px;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 500px;
+    border-radius: 15px;
+    margin: 50px;
+    margin-top: -50px;
+}
+
+.kontakt-box-content {
+    width: 100%;
+}
+
+.kontakt-wrapper-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.anfrage-type {
+    padding: 5px;
+}
+
+.anfrage-type-title {
+    font-size: 25px;
+}
+
+.anfrage-type-title span {
+    color: #111;
+}
+
+#kontakt-anfrage-dropdown-list {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#anzahl-anfrage {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#unternehmen_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#from_name {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#email_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#telefon_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#bauzaun_anzahl_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#message {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.kontakt-wrapper-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.kontakt-box p {
+    font-size: 20px;
+}
+
+
+.masse-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.type-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.kontakt-box button {
+    margin-top: 20px;
+    background-color: #111;
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 100%;
+    transition: .2s;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+#angebot-infos-details {
+    font-size: 20px;
+}
+
+#angebot-masse-title {
+    font-weight: 100;
+    font-size: 25px;
+}
+
+#breite_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#hoehe_id {
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.angebot-list p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#important-note {
+    font-weight: 100;
+}

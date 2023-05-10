@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="qr.css">
+    <script src="https://kit.fontawesome.com/960295115a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=DM+Sans&family=Inter:wght@300&family=Josefin+Sans&family=Libre+Baskerville&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <title>MietEinBauschild | Startseite</title>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <img class="top-header-content-logo" src="../assets/preview/logo.png">
+        </div>
+        <nav class="nav-bar">
+            <a class="nav-bar-selection" href="../index.html">Startseite</a>
+            <a class="nav-bar-selection" href="../Produkte/index.html">Produkte</a>
+            <a class="nav-bar-selection" href="../QR/index.html">QR-Code</a>
+            <a class="nav-bar-selection button" href="../Kontakt/index.html">Kontakt</a>
+        </nav>
+        <nav class="nav-bar-icon">
+            <button class="nav-bar-icon-btn button" onclick="openIconNavbar()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div class="nav-bar-icon-menu" id="nav-bar-icon-menu">
+        <a class="nav-bar-icon-selector" href="../index.html">Startseite</a>
+        <a class="nav-bar-icon-selector" href="../Produkte/index.html">Produkte</a>
+        <a class="nav-bar-icon-selector" href="../QR/index.html">QR-Code</a>
+        <a class="nav-bar-icon-selector" href="../Kontakt/index.html">Kontakt</a>
+        <button class="nav-bar-icon-close button" onclick="closeIconNavbar()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <section class="qr-wrapper">
+        <div class="qr-wrapper-content">
+            <div class="qr-wrapper-titles">
+                <h2 class="qr-wrapper-title">Bauschild inklusive QR Code</h2>
+                <h3 class="qr-wrapper-desc">Alles inklusive und alles zu einem Preis</h3>    
+            </div>
+            
+            <img src="../assets/icons/91.png">
+        </div>
+    </section>
+
+    <section class="qr-wasist">
+        <h2 class="qr-wasist-title">Was ist ein QR-Code?</h2>
+
+        <div class="qr-wasist-content">
+            <h3 class="qr-erklaerung">Ein QR Code ist eine zweidimensionale Version des Barcodes, die typischerweise aus einer schwarz-weißen Pixelstruktur besteht. Durch die weit verbreitete Nutzung von Smartphones mischen QR Codes mittlerweile auch kräftig im Mobile Marketing mit. „QR“ steht für „Quick Response“, also für eine schnelle Reaktion. Dies bezieht sich auf den unmittelbaren Zugang zu den im Code versteckten Informationen.</h3>
+        
+            <img class="qr-image" src="../assets/preview/qr-code.png">
+        </div>
+    </section>
+
+    <section class="qr-vorteile">
+        <div class="qr-vorteile-content">
+            <div class="qr-vorteile-item">
+                <h2 class="qr-vorteile-title">Vorteile von QR-Codes</h2>
+
+                <p>QR Codes werden immer beliebter, weil sie so vielseitig sind. Sie können mit QR Codes Feedback sammeln, um Ihre Produkte und Dienstleistungen zu optimieren, die Kundenbindung mit Bildern oder Videos erhöhen oder sogar Ihr Unternehmen oder Ihre Baustelle zu  bewerben. Und all das ist möglich über einen einzigen Scan!</p>
+            </div>
+            <div class="qr-wie-item">
+                <h3 class="qr-wie-title">Wie kann ich QR Codes scannen?</h3>
+                
+                <p>Heutzutage sind in allen Smart-Phones ein QR Code Reader integriert. Eventuell verfügt Ihr Smartphone bereits über einen integrierten QR-Code-Scanner oder -Reader. Öffnen Sie die Kamera-App Ihres Geräts und richten Sie die Kamera für ein paar Sekunden auf einen QR Code, bis eine Benachrichtigung erscheint. </p>
+                <br>
+                <p>Falls dies nicht der Fall ist, sollten Sie in den Einstellungen Ihres Gerät überprüfen, ob die Option zum Scannen von QR Codes aktiviert ist. Wenn auch das nicht weiterhilft, müssen Sie einfach nur einen QR-Code-Reader eines Drittanbieters aus Ihrem App Store herunterladen.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bottom-footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3 class="footer-item-title">MietEinBauschild</h3>
+                <p class="footer-item-title-desc">Medardusring 328<br>Mutterstadt</p>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Aktionen</h3>
+                <a class="footer-selector" href="../index.html">Startseite</a>
+                <a class="footer-selector" href="../Produkte/index.html">Produkte</a>
+                <a class="footer-selector" href="../QR/index.html">QR-Code</a>
+                <a class="footer-selector" href="../Kontakt/index.html">Kontakt</a>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Rechtliches</h3>
+                <a class="footer-selector" href="#">Impressum</a>
+                <a class="footer-selector" href="#">Datenschutz</a>
+                <a class="footer-selector" href="#">AGBs</a>
+            </div>
+            <div class="footer-item">
+                <a class="footer-selector" id="footer-icon" href="https://wa.me/4917671705022"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="../script.js"></script>
+    <script src="../config.js"></script>
+</body>
+</html>

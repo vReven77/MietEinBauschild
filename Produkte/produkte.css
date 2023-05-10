@@ -1,0 +1,54 @@
+.angebote-wrapper {
+    width: 100%;
+    padding-bottom: 250px;
+}
+
+.angebote-wrapper-title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.angebote-wrapper-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.angebote-wrapper-item {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    max-width: 400px;
+    cursor: default;
+}
+
+.angebote-wrapper-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .2s;
+}
+
+.angebote-wrapper-item img {
+    max-height: 150px;
+}
+
+.angebote-wrapper-item h3 {
+    color: rgb(22, 22, 22);
+    font-weight: 900;
+    text-align: left;
+}
+
+.angebote-wrapper-item p {
+    color: #111;
+}
+
+#lieferung {
+    color: #13c08d;
+    padding-bottom: 20px;
+}
+
+.angebot-item-btn {
+    margin-top: 20px;
+}

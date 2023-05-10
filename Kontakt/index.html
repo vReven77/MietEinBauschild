@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="kontakt.css">
+    <script src="https://kit.fontawesome.com/960295115a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=DM+Sans&family=Inter:wght@300&family=Josefin+Sans&family=Libre+Baskerville&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <title>MietEinBauschild | Startseite</title>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <img class="top-header-content-logo" src="../assets/preview/logo.png">
+        </div>
+        <nav class="nav-bar">
+            <a class="nav-bar-selection" href="../index.html">Startseite</a>
+            <a class="nav-bar-selection" href="../Produkte/index.html">Produkte</a>
+            <a class="nav-bar-selection" href="../QR/index.html">QR-Code</a>
+            <a class="nav-bar-selection button" href="../Kontakt/index.html">Kontakt</a>
+        </nav>
+        <nav class="nav-bar-icon">
+            <button class="nav-bar-icon-btn button" onclick="openIconNavbar()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <div class="nav-bar-icon-menu" id="nav-bar-icon-menu">
+        <a class="nav-bar-icon-selector" href="../index.html">Startseite</a>
+        <a class="nav-bar-icon-selector" href="../Produkte/index.html">Produkte</a>
+        <a class="nav-bar-icon-selector" href="../QR/index.html">QR-Code</a>
+        <a class="nav-bar-icon-selector" href="../Kontakt/index.html">Kontakt</a>
+        <button class="nav-bar-icon-close button" onclick="closeIconNavbar()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <section class="kontakt-wrapper">
+        <div class="kontakt-wrapper-content">
+            <div class="kontakt-box">
+                <h2 class="kontakt-wrapper-title">Online Anfrage senden</h2>
+                
+                <div class="kontakt-box-content">
+                    <div class="anfrage-type">
+                        <h3 class="anfrage-type-title">Welche Leistung möchten Sie? <span>*</span></h3>
+                        <select id="kontakt-anfrage-dropdown-list" onchange="checkType()">
+                            <option>-</option>
+                            <option value="Bauschild">Bauschild / Bautafel</option>
+                            <option value="Containerwerbung">Containerwerbung</option>
+                            <option value="Bauzaunwerbung">Bauzaunwerbung</option>
+                            <option value="Baugeruestbanner">Baugerüstbanner</option>
+                            <option value="Ausleger">Ausleger</option>
+                            <option value="Beschriftung">Beschriftung</option>
+                        </select>
+                    </div>
+    
+                    <div id="bauschild-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Bauschild / Bautafel Eigenschaften:</h2>
+                        <p id="angebot-infos-details"><b>Materialtyp:</b> Aluverbundplatte</p>
+                        <p id="angebot-infos-details"><b>Druck-Art:</b> UV-Druck</p>
+                        <br>
+                        <h3 id="angebot-masse-title">Maße in <b>cm</b></h3>
+                        <div class="masse-box">
+                            <div class="breite-input">
+                                <p>Breite</p>
+                                <input type="number" id="breite_id">
+                            </div>
+                            <div class="hoehe-input">
+                                <p>Höhe</p>
+                                <input type="number" id="hoehe_id">
+                            </div>    
+                        </div>
+                        <br>
+                        <div class="type-box">
+                            <div class="mieten-input">
+                                <p>Mieten</p>
+                                <input type="radio" name="type-angebot" id="mieten_id" name="mob" onclick="getMietenOrKaufen(this.value)" value="Mieten">
+                            </div>
+                            <div class="kaufen-input">
+                                <p>Kaufen</p>
+                                <input type="radio" name="type-angebot" id="kaufen_id" name="mob" onclick="getMietenOrKaufen(this.value)" value="Kaufen">
+                            </div>
+                        </div>    
+                        <br>
+                    </div>
+
+                    <div id="bauzaun-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Bauzaunwerbung Eigenschaften:</h2>
+                        <p id="angebot-infos-details"><b>Maße:</b>  340 x 173 cm</p>
+                        
+                        <p><b>Anzahl</b></p>
+                        <input id="bauzaun_anzahl_id">
+                        <br>
+                        <br>
+                    </div>
+
+                    <div id="container-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Containerwerbung Eigenschaften:</h2>
+                        <p id="angebot-infos-details">Eigenschaften werden per E-Mail besprochen.</p>
+                        <br>
+                    </div>
+
+                    <div id="baugeruestbanner-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Baugerüstbanner Eigenschaften:</h2>
+                        <p id="angebot-infos-details">Eigenschaften werden per E-Mail besprochen.</p>
+                        <br>
+                    </div>
+
+                    <div id="ausleger-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Ausleger Eigenschaften:</h2>
+                        <p id="angebot-infos-details">Eigenschaften werden per E-Mail besprochen.</p>
+                        <br>
+                    </div>
+
+                    <div id="beschriftung-infos" style="display: none;">
+                        <h2 class="anfrage-type-title">Beschriftung Eigenschaften:</h2>
+                        <p id="angebot-infos-details">Eigenschaften werden per E-Mail besprochen.</p>
+                        <br>
+                    </div>
+                    
+                    <div class="unternehmen-input">
+                        <h3 class="anfrage-type-title">Unternehmen <span>*</span></h3>
+                        
+                        <input id="unternehmen_id" type="text" required>
+                    </div>
+                    
+                    <div class="name-input">
+                        <h3 class="anfrage-type-title">Vor- und Nachname<span>*</span></h3>
+                        
+                        <input id="from_name" type="text" required>
+                    </div>
+    
+                    <div class="email-input">
+                        <h3 class="anfrage-type-title">E-Mail Addresse <span>*</span></h3>
+                        
+                        <input id="email_id" type="email" required>
+                    </div>
+                    <div class="telefon-input">
+                        <h3 class="anfrage-type-title">Telefonnummer <span></span></h3>
+                        <input id="telefon_id" type="number">
+                    </div>
+                    <div class="nachricht-input">
+                        <h3 class="anfrage-type-title">Nachricht <span></span></h3>
+    
+                        <textarea id="message" name="nachricht"></textarea>
+                    </div>
+                    <br>
+                    <h3 id="important-note">Es wird sich in kürze ein Mitarbeiter per <b>E-Mail</b> melden.</p>
+                    <button onclick="SendMail()">Absenden</button>    
+                </div>            
+            </div>
+        </div>
+    </section>
+
+    <footer class="bottom-footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3 class="footer-item-title">MietEinBauschild</h3>
+                <p class="footer-item-title-desc">Medardusring 328<br>Mutterstadt</p>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Aktionen</h3>
+                <a class="footer-selector" href="../index.html">Startseite</a>
+                <a class="footer-selector" href="../Produkte/index.html">Produkte</a>
+                <a class="footer-selector" href="../QR/index.html">QR-Code</a>
+                <a class="footer-selector" href="../Kontakt/index.html">Kontakt</a>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-item-title">Rechtliches</h3>
+                <a class="footer-selector" href="#">Impressum</a>
+                <a class="footer-selector" href="#">Datenschutz</a>
+                <a class="footer-selector" href="#">AGBs</a>
+            </div>
+            <div class="footer-item">
+                <a class="footer-selector" id="footer-icon" href="https://wa.me/4917671705022"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("l1RWbBqBJz6MRQ39X");
+       })();
+    </script>
+    <script>
+        var KaufenOderMieten = "";
+        var selectedAngebot = "";
+
+        function getMietenOrKaufen(mob) {
+            KaufenOderMieten = mob;
+        }
+
+        function checkType() {
+            var x = document.getElementById("kontakt-anfrage-dropdown-list").value;
+            selectedAngebot = x;
+
+            if (selectedAngebot == "Bauschild") {
+                document.getElementById("bauschild-infos").style.display = "block";
+            } else {
+                document.getElementById("bauschild-infos").style.display = "none";
+            }
+            if (selectedAngebot == "Bauzaunwerbung") {
+                document.getElementById("bauzaun-infos").style.display = "block";
+            } else {
+                document.getElementById("bauzaun-infos").style.display = "none";
+            }
+            if (selectedAngebot == "Containerwerbung") {
+                document.getElementById("container-infos").style.display = "block";
+            } else {
+                document.getElementById("container-infos").style.display = "none";
+            }
+            if (selectedAngebot == "Baugeruestbanner") {
+                document.getElementById("baugeruestbanner-infos").style.display = "block";
+            } else {
+                document.getElementById("baugeruestbanner-infos").style.display = "none";
+            }
+            if (selectedAngebot == "Ausleger") {
+                document.getElementById("ausleger-infos").style.display = "block";
+            } else {
+                document.getElementById("ausleger-infos").style.display = "none";
+            }
+            if (selectedAngebot == "Beschriftung") {
+                document.getElementById("beschriftung-infos").style.display = "block";
+            } else {
+                document.getElementById("beschriftung-infos").style.display = "none";
+            }
+        }
+
+        function SendMail() {
+
+            if (document.getElementById('unternehmen_id').value === ""){
+                alert("Bitte füllen sie die Pflichtfelder aus")
+                return;
+            }else if (document.getElementById('from_name').value === ""){
+                alert("Bitte füllen sie die Pflichtfelder aus")
+                return;
+            }else if (document.getElementById('email_id').value === ""){
+                alert("Bitte füllen sie die Pflichtfelder aus")
+                return;
+            }
+
+            var params = {
+                unternehmen_id: document.getElementById("unternehmen_id").value,
+                from_name : document.getElementById("from_name").value,
+                email_id : document.getElementById("email_id").value,
+                telefon_id : document.getElementById("telefon_id").value,
+                message : document.getElementById("message").value,
+                angebot_id : selectedAngebot,
+                bauschildbreite : document.getElementById("breite_id").value,
+                bauschildhoehe : document.getElementById("hoehe_id").value,
+                bauschildtype : KaufenOderMieten,
+                bauzaunanzahl: document.getElementById("bauzaun_anzahl_id").value
+            }
+            emailjs.send("service_wn9uxj4", "template_htvxsqv", params).then(function (res) {
+                alert("Anfrage erfolgreich abgeschickt.");
+                location.reload();
+            })
+        }
+    </script>
+    <script src="../script.js"></script>
+    <script src="../config.js"></script>
+</body>
+</html>
